@@ -33,3 +33,8 @@ freeline.py
 freeline/
 freeline_project_description.json
 /.idea
+将删除 app/libs/
+将删除 common/src/main/java/site/paranoia/common/utils/
+将删除 itemdecorationdemo/libs/
+将删除 mpandroidchartdemo/libs/
+将删除 libs/
