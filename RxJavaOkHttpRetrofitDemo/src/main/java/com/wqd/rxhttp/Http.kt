@@ -9,7 +9,15 @@ import io.reactivex.schedulers.Schedulers
 /**
  * Created by Paranoia on 12/24/17.
  */
+class Http<T> {
+    lateinit var observable: Observable<BaseReturnBean<T>>
+    var success: ((json: BaseReturnBean<T>) -> Unit)? = null
+}
 
+fun <T> http(create: Http<T>.() -> Unit) {
+    val h = Http<T>().apply { create() }
+    httpPost(h)
+}
 
 private class CommonFilter<T> : Function<BaseReturnBean<T>, BaseReturnBean<T>> {
     @Throws(Exception::class)
@@ -28,13 +36,13 @@ private class CommonFilter<T> : Function<BaseReturnBean<T>, BaseReturnBean<T>> {
 
 
 @SuppressLint("CheckResult")
-fun <T> http(observable: Observable<BaseReturnBean<T>>, success: ((json: BaseReturnBean<T>) -> Unit))  {
-    observable
+fun <T> httpPost(http: Http<T>)  {
+    http.observable
             .map(CommonFilter())
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ data ->
-                success.invoke(data)
+                http.success!!.invoke(data)
             }, { throwable ->
                 try {
                     throwable.printStackTrace()
