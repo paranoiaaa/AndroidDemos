@@ -1,1 +1,1 @@
-include ':app', ':common', ':itemdecorationdemo', ':mpandroidchartdemo', ':zxingdemo'
+include ':app', ':common', ':itemdecorationdemo', ':mpandroidchartdemo', ':zxingdemo',':RxJavaOkHttpRetrofitDemo'
