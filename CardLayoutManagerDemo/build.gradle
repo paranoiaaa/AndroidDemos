@@ -2,17 +2,16 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 android {
-    compileSdkVersion 26
-
+    compileSdkVersion compile_sdk
+    buildToolsVersion build_tools
 
 
     defaultConfig {
         applicationId "com.example.cardlayoutmanagerdemo"
-        minSdkVersion 19
-        targetSdkVersion 26
+        minSdkVersion min_sdk
+        targetSdkVersion target_sdk
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
