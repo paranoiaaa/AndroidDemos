@@ -1,1 +1,1 @@
-include ':app', ':common', ':itemdecorationdemo', ':mpandroidchartdemo', ':zxingdemo',':RxJavaOkHttpRetrofitDemo', ':KotlinDemo', ':CardLayoutManagerDemo'
+include ':app', ':common', ':itemdecorationdemo',':RxJavaOkHttpRetrofitDemo', ':KotlinDemo', ':CardLayoutManagerDemo', ':ConstraintLayoutDemo'

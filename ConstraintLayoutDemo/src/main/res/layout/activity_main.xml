@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.constraintlayoutdemo.MainActivity">
+
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="48dp"
+        android:layout_height="30dp"
+        android:background="#f67"
+        android:gravity="center"
+        android:text="TAB1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_2"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        />
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="48dp"
+        android:layout_height="30dp"
+        android:background="#a67"
+        android:gravity="center"
+        android:text="TAB2"
+        app:layout_constraintLeft_toRightOf="@+id/tv_1"
+        app:layout_constraintRight_toLeftOf="@id/tv_3"
+        app:layout_constraintHorizontal_weight="1"
+        />
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_width="48dp"
+        android:layout_height="30dp"
+        android:background="#767"
+        android:gravity="center"
+        android:text="TAB3"
+        app:layout_constraintLeft_toRightOf="@id/tv_2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#612"
+        app:layout_constraintLeft_toRightOf="@id/guideline_w"
+        app:layout_constraintTop_toBottomOf="@id/guideline_h" />
+
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#612"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
+
+</android.support.constraint.ConstraintLayout>
