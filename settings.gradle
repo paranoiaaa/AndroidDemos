@@ -1,1 +1,1 @@
-include ':common', ':itemdecorationdemo',':RxJavaOkHttpRetrofitDemo', ':KotlinDemo', ':CardLayoutManagerDemo', ':ConstraintLayoutDemo', ':KotlinCoroutineDemo'
+include ':common', ':itemdecorationdemo',':RxJavaOkHttpRetrofitDemo', ':KotlinDemo', ':CardLayoutManagerDemo', ':ConstraintLayoutDemo', ':KotlinCoroutineDemo', ':LifecycleDemo'
